@@ -21,6 +21,6 @@ wrap_parameters format: []
     end
 
     def render_unprocessable_entity(invalid)
-        render json: { error: invalid.record.errors.full_messages }, status: :unprocessable_entity
+        render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
     end
 end
